@@ -21,17 +21,17 @@ START_TIME = time.time()
 # Ask Doubt on telegram @KingVJ01
 
 main_buttons = [[
-    InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/kingvj01')
+    InlineKeyboardButton('🧤DeveLoper🧤', url='https://t.me/BhardwajBhavit')
 ],[
-    InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vj_bot_disscussion'),
-    InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vj_botz')
+    InlineKeyboardButton('🧪Support Grp🧪', url='https://t.me/MovieWalaChat'),
+    InlineKeyboardButton('🧪Update Channel🧪', url='https://t.me/LarvaLinks')
 ],[
-    InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
+    InlineKeyboardButton('🧤Tap karo🧤', url='https://t.me/PiratesHunts_Bot')
 ],[
-    InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
-    InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
+    InlineKeyboardButton('🧬Help Lelo🧬', callback_data='help'),
+    InlineKeyboardButton('🧬About🧬', callback_data='about')
 ],[
-    InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
+    InlineKeyboardButton('🧤Settings🧤', callback_data='settings#main')
 ]]
 
 # Don't Remove Credit Tg - @VJ_Botz
@@ -68,12 +68,12 @@ async def restart(client, message):
 @Client.on_callback_query(filters.regex(r'^help'))
 async def helpcb(bot, query):
     buttons = [[
-        InlineKeyboardButton('🤔 ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ❓', callback_data='how_to_use')
+        InlineKeyboardButton('⚗How to Use⚗', callback_data='how_to_use')
     ],[
-        InlineKeyboardButton('Aʙᴏᴜᴛ ✨️', callback_data='about'),
-        InlineKeyboardButton('⚙ Sᴇᴛᴛɪɴɢs', callback_data='settings#main')
+        InlineKeyboardButton('🧬About🧬', callback_data='about'),
+        InlineKeyboardButton('🔻Settings🔻', callback_data='settings#main')
     ],[
-        InlineKeyboardButton('• back', callback_data='back')
+        InlineKeyboardButton('•Back', callback_data='back')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(text=Script.HELP_TXT, reply_markup=reply_markup)
@@ -110,8 +110,8 @@ async def back(bot, query):
 @Client.on_callback_query(filters.regex(r'^about'))
 async def about(bot, query):
     buttons = [[
-         InlineKeyboardButton('• back', callback_data='help'),
-         InlineKeyboardButton('Stats ✨️', callback_data='status')
+         InlineKeyboardButton('• Back', callback_data='help'),
+         InlineKeyboardButton('SStats', callback_data='status')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
@@ -131,7 +131,7 @@ async def status(bot, query):
     upt = await get_bot_uptime(START_TIME)
     buttons = [[
         InlineKeyboardButton('• back', callback_data='help'),
-        InlineKeyboardButton('System Stats ✨️', callback_data='systm_sts'),
+        InlineKeyboardButton('System Stats 🧪;', callback_data='systm_sts'),
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
@@ -154,15 +154,13 @@ async def sys_status(bot, query):
     used_space = disk_usage.used / (1024**3)    # Convert to GB
     free_space = disk_usage.free / (1024**3)
     text = f"""
-╔════❰ sᴇʀᴠᴇʀ sᴛᴀᴛs  ❱═❍⊱❁۪۪
-║╭━━━━━━━━━━━━━━━➣
-║┣⪼ <b>ᴛᴏᴛᴀʟ ᴅɪsᴋ sᴘᴀᴄᴇ</b>: <code>{total_space:.2f} GB</code>
-║┣⪼ <b>ᴜsᴇᴅ</b>: <code>{used_space:.2f} GB</code>
-║┣⪼ <b>ꜰʀᴇᴇ</b>: <code>{free_space:.2f} GB</code>
-║┣⪼ <b>ᴄᴘᴜ</b>: <code>{cpu}%</code>
-║┣⪼ <b>ʀᴀᴍ</b>: <code>{ram}%</code>
-║╰━━━━━━━━━━━━━━━➣
-╚══════════════════❍⊱❁۪۪
+━⬍━⬍━⬍━⬍━⬍━⬍━⬍━⬍━⬍━⬍━⬍━⬍━
+ ⚗<b>ᴛᴏᴛᴀʟ ᴅɪsᴋ sᴘᴀᴄᴇ</b>: <code>{total_space:.2f} GB</code>
+ ⚗<b>ᴜsᴇᴅ</b>: <code>{used_space:.2f} GB</code>
+ ⚗<b>ꜰʀᴇᴇ</b>: <code>{free_space:.2f} GB</code>
+ ⚗<b>ᴄᴘᴜ</b>: <code>{cpu}%</code>
+ ⚗<b>ʀᴀᴍ</b>: <code>{ram}%</code>
+━⬍━⬍━⬍━⬍━⬍━⬍━⬍━⬍━⬍━⬍━⬍━⬍━
 """
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
